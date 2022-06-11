@@ -26,7 +26,16 @@ SECRET_KEY = '1_vj5u9p3nm4fwufe_96e9^6li1htp9avbg8+7*i#h%klp#&0='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    'http://localhost',
+    'http://localhost:3000',
+    ]
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+       'http://localhost',
+       'http://localhost:3000',
+       )
 
 # Application definition
 
@@ -133,7 +142,3 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
-
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost',
-)
